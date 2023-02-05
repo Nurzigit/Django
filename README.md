@@ -6,7 +6,7 @@
 
 <h3 align="left"> Second command:</h3>
 <h5 align="left"> To install the necessary libraries <h5>
-<p align="left">$ pip install -r requirements.txt
+<p align="left">$ pip install -r requirements.txt 
 </p>
 
 <h3 align="left">Languages and Tools:</h3>

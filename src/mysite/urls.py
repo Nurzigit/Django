@@ -16,6 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+
+from pages.views import (
+    home_screen_view,
+)
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', home_screen_view),
 ]
+handler500 = 'pages.views.error500'
+handler404 = 'pages.views.error_404'
+handler403 = 'pages.views.error_403'
+handler400 = 'pages.views.error_400'
