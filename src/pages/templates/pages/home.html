@@ -1,8 +1,12 @@
 {% extends 'index.html' %}
 
 {% block content %}
+
     <div>
         <h1>This is boby</h1>
         <p>Will be extended body</p>
+        {% for list_item in list_of_value %}
+            {% include 'pages/layout/body_snippets.html' with value=list_item%}
+        {% endfor %}
     <div>
 {% endblock content %}
