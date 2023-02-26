@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['127.0.0.1']
 INSTALLED_APPS = [
     #Create to me fle
     'pages',
+    'account', 
 
     #Django initails app
     'django.contrib.admin',
@@ -70,6 +71,9 @@ TEMPLATES = [
         },
     },
 ]
+
+# For auth every users, and chek his roles
+AUTH_USER_MODEL = 'account.Account'
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
