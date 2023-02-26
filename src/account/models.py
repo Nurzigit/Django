@@ -16,12 +16,12 @@ class MyAccountManager(BaseUserManager):
                username = username,
             )
         user.set_password(password)
-        user.save(user=self._db)
+        user.save(using=self._db)
         return user
     
     # Create super user for our site
     def create_superuser(self, email, username, password):
-        user = self.model(
+        user = self.create_user(
             # the func normalize is write all verbs in lowercase, the func is only used in the class BaseUserManager
                email=self.normalize_email(email),
                username = username,
