@@ -23,6 +23,7 @@ from pages.views import (
 from account.views import (
     registration_view,
     logout_view,
+    login_view,
 )
 
 urlpatterns = [
@@ -30,6 +31,7 @@ urlpatterns = [
     path('', home_screen_view, name="home"),
     path('register/', registration_view, name="register"),
     path('logout/', logout_view, name="logout"),
+    path('login/', login_view, name="login"),
 ]
 handler500 = 'pages.views.error500'
 hander404 = 'pages.views.error_404'
