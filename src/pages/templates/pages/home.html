@@ -1,12 +1,9 @@
 {% extends 'index.html' %}
 
 {% block content %}
+<h3>Registered users</h3>
+    {% for account in accounts %}
+         <p>{{account}}</p>
+    {% endfor %}
 
-    <div>
-        <h1>This is boby</h1>
-        <p>Will be extended body</p>
-        {% for account in accounts %}
-            <p>{{account}}</p>
-        {% endfor %}
-    <div>
 {% endblock content %}

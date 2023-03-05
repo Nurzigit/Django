@@ -22,14 +22,16 @@ from pages.views import (
 )
 from account.views import (
     registration_view,
+    logout_view,
 )
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_screen_view, name="home"),
     path('register/', registration_view, name="register"),
+    path('logout/', logout_view, name="logout"),
 ]
 handler500 = 'pages.views.error500'
-handler404 = 'pages.views.error_404'
+hander404 = 'pages.views.error_404'
 handler403 = 'pages.views.error_403'
 handler400 = 'pages.views.error_400'
