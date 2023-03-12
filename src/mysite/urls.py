@@ -18,7 +18,10 @@ from django.urls import path
 
 
 from pages.views import (
-    home_screen_view,
+    IndexHome,
+    about_screen_view,
+    AddPage,
+    ShowPost,
 )
 from account.views import (
     registration_view,
@@ -28,7 +31,10 @@ from account.views import (
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home_screen_view, name="home"),
+    path('', IndexHome.as_view(), name="home"),
+    path('about/', about_screen_view, name="about"),
+    path('addpage/', AddPage.as_view(), name="addpage"),
+     path('post/', ShowPost.as_view(), name="post"),
     path('register/', registration_view, name="register"),
     path('logout/', logout_view, name="logout"),
     path('login/', login_view, name="login"),
