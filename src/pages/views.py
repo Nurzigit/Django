@@ -7,9 +7,9 @@ from django.views.generic import ListView, CreateView, DetailView
 # Create your views here.
 
 class IndexHome(ListView):
-    model = Account
+    model = Post
     template_name = 'pages/home.html'
-    context_object_name = 'accounts'
+    context_object_name = 'post'
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -37,14 +37,14 @@ class AddPage(CreateView):
         context['title'] = 'Добавление статьи'
         return context
     
-class ShowPost(DetailView):
+class ShowPost(ListView):
     model = Post
     template_name = 'pages/post.html'
     context_object_name = 'post'
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title'] = context['post']
+        context['title'] = 'Посты'
         return context
 
 # ERRORS LOGIC
